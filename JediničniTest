@@ -1,0 +1,26 @@
+public class CalculatorTest {
+
+    public static void main(String[] args) {
+        testCalculate();
+    }
+
+    public static void testCalculate() {
+        // Testni slučaj 1: Sabiranje i oduzimanje
+        assertFloatEquals(10.0f, izvrsiRacunanje("5.0+5.0"));
+
+        // Testni slučaj 2: Oduzimanje i množenje
+        assertFloatEquals(5.0f, izvrsiRacunanje("10.0-5.0"));
+
+        // Testni slučaj 3: Množenje i dijeljenje
+        assertFloatEquals(25.0f, izvrsiRacunanje("5.0*5.0"));
+
+        // Testni slučaj 4: Dijeljenje i složeno računanje
+        assertFloatEquals(2.0f, izvrsiRacunanje("10.0/5.0"));
+
+        // Testni slučaj 5: Složeno računanje (Zbrajanje, Oduzimanje, Množenje)
+        assertFloatEquals(15.0f, izvrsiRacunanje("5.0+10.0-2.0*3.0"));
+    
+
+        }
+    }
+}
